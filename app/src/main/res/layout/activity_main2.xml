@@ -25,74 +25,111 @@
         android:id="@+id/layoutNombre"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:hint="Nombre completo"
-        android:layout_marginTop="30dp"
         android:layout_marginStart="40dp"
+        android:layout_marginTop="30dp"
         android:layout_marginEnd="40dp"
-        app:layout_constraintTop_toBottomOf="@id/txtTitulo"
+        android:hint="Nombres"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintTop_toBottomOf="@id/txtTitulo">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/inputNombre"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textPersonName"/>
+            android:inputType="textPersonName" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <!-- Correo -->
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/layoutEmail"
+        android:id="@+id/layoutApellido"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:hint="Correo electrónico"
-        android:layout_marginTop="20dp"
         android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="40dp"
-        app:layout_constraintTop_toBottomOf="@id/layoutNombre"
+        android:hint="Apellidos"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintTop_toBottomOf="@id/layoutNombre">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/inputEmail"
+            android:id="@+id/inputApellido"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textEmailAddress"/>
+            android:inputType="textPersonName" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <!-- Contraseña -->
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/layoutPassword"
+        android:id="@+id/layoutId"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:hint="Contraseña"
-        android:layout_marginTop="20dp"
         android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="40dp"
-        app:passwordToggleEnabled="true"
-        app:layout_constraintTop_toBottomOf="@id/layoutEmail"
+        android:hint="ID"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintTop_toBottomOf="@id/layoutApellido"
+        app:passwordToggleEnabled="true">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/inputPassword"
+            android:id="@+id/inputId"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textPassword"/>
+            android:inputType="textPassword" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <!-- Botón -->
+
     <Button
         android:id="@+id/btnRegistrar"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Registrar"
-        android:layout_marginTop="28dp"
         android:layout_marginStart="40dp"
+        android:layout_marginTop="144dp"
         android:layout_marginEnd="40dp"
-        android:layout_marginBottom="24dp"
-        app:layout_constraintTop_toBottomOf="@id/layoutPassword"
-        app:layout_constraintStart_toStartOf="parent"
+        android:text="Registrar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layoutId" />
+
+    <LinearLayout
+        android:layout_width="334dp"
+        android:layout_height="56dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteX="40dp"
+        tools:layout_editor_absoluteY="516dp">
+
+        <Button
+            android:id="@+id/btnActualizar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Actualizar" />
+
+        <Button
+            android:id="@+id/btnBorrar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Borrar" />
+
+        <Button
+            android:id="@+id/btnListar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Listar" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnBuscar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Buscar"
+        tools:layout_editor_absoluteX="159dp"
+        tools:layout_editor_absoluteY="572dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

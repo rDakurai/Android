@@ -5,9 +5,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivityU">
+    tools:context=".MainActivity">
 
-    <!-- Título -->
     <TextView
         android:id="@+id/txtTitulo"
         android:layout_width="wrap_content"
@@ -20,7 +19,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="40dp"/>
 
-    <!-- Nombre -->
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/layoutNombre"
         android:layout_width="0dp"
@@ -40,7 +38,6 @@
             android:inputType="textPersonName" />
     </com.google.android.material.textfield.TextInputLayout>
 
-    <!-- Correo -->
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/layoutApellido"
         android:layout_width="0dp"
@@ -60,7 +57,6 @@
             android:inputType="textPersonName" />
     </com.google.android.material.textfield.TextInputLayout>
 
-    <!-- Contraseña -->
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/layoutId"
         android:layout_width="0dp"
@@ -81,44 +77,51 @@
             android:inputType="textPassword" />
     </com.google.android.material.textfield.TextInputLayout>
 
-    <!-- Botón -->
-
     <Button
         android:id="@+id/btnregistrar"
+        android:onClick="Guardar"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
         android:layout_marginTop="144dp"
         android:layout_marginEnd="40dp"
         android:text="Registrar"
+        app:layout_constraintBottom_toBottomOf="@+id/layoutBtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/layoutId" />
+        app:layout_constraintTop_toBottomOf="@id/layoutId"
+        app:layout_constraintVertical_bias="0.0"
+        app:toggleCheckedStateOnClick="true" />
 
     <LinearLayout
         android:id="@+id/layoutBtn"
         android:layout_width="334dp"
         android:layout_height="56dp"
+        android:layout_marginBottom="16dp"
         android:gravity="center_horizontal|center_vertical"
         android:orientation="horizontal"
-        tools:layout_editor_absoluteX="40dp"
-        tools:layout_editor_absoluteY="516dp">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
         <Button
             android:id="@+id/btnactualizar"
+            android:onClick="Actualizar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Actualizar" />
 
         <Button
             android:id="@+id/btnborrar"
+            android:onClick="Eliminar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Borrar" />
 
         <Button
             android:id="@+id/btnistar"
+            android:onClick="Listar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Listar" />
@@ -127,10 +130,13 @@
 
     <Button
         android:id="@+id/btnbuscar"
+        android:onClick="Buscar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Buscar"
-        tools:layout_editor_absoluteX="159dp"
-        tools:layout_editor_absoluteY="572dp" />
+        app:layout_constraintBottom_toTopOf="@+id/layoutBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnregistrar" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

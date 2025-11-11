@@ -1,12 +1,13 @@
 package com.example.myapplication;
-
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-
 import androidx.annotation.Nullable;
 
 public class FeedReaderDbHelper extends SQLiteOpenHelper {
+
+    public static final int DATABASE_VERSION = 1;
+    public static final String DATABASE_NAME = "Ejemplo.db";
     public FeedReaderDbHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
@@ -24,8 +25,6 @@ public class FeedReaderDbHelper extends SQLiteOpenHelper {
         onCreate(db);
 
     }
-
-    @Override
     public void onDownGrade(SQLiteDatabase db, int oldVersion, int newVersion ) {
         onUpgrade(db, oldVersion, newVersion);
     }

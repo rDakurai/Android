@@ -67,39 +67,45 @@
         android:hint="ID"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/layoutApellido"
-        app:passwordToggleEnabled="true">
+        app:layout_constraintTop_toBottomOf="@id/layoutApellido">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/txtId"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textPassword" />
+            android:inputType="number" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
         android:id="@+id/btnregistrar"
-        android:onClick="Guardar"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
-        android:layout_marginTop="144dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="40dp"
+        android:onClick="Guardar"
         android:text="Registrar"
-        app:layout_constraintBottom_toBottomOf="@+id/layoutBtn"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/layoutId"
-        app:layout_constraintVertical_bias="0.0"
-        app:toggleCheckedStateOnClick="true" />
+        app:layout_constraintTop_toBottomOf="@id/layoutId" />
+
+    <Button
+        android:id="@+id/btnbuscar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="Buscar"
+        android:text="Buscar"
+        app:layout_constraintBottom_toTopOf="@+id/layoutBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnregistrar" />
 
     <LinearLayout
         android:id="@+id/layoutBtn"
-        android:layout_width="334dp"
-        android:layout_height="56dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
-        android:gravity="center_horizontal|center_vertical"
+        android:gravity="center_horizontal"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -107,36 +113,27 @@
 
         <Button
             android:id="@+id/btnactualizar"
-            android:onClick="Actualizar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:onClick="Actualizar"
             android:text="Actualizar" />
 
         <Button
             android:id="@+id/btnborrar"
-            android:onClick="Eliminar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:onClick="Eliminar"
             android:text="Borrar" />
 
         <Button
-            android:id="@+id/btnistar"
-            android:onClick="Listar"
+            android:id="@+id/btnlistar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="Listar"
             android:text="Listar" />
 
     </LinearLayout>
-
-    <Button
-        android:id="@+id/btnbuscar"
-        android:onClick="Buscar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Buscar"
-        app:layout_constraintBottom_toTopOf="@+id/layoutBtn"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnregistrar" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

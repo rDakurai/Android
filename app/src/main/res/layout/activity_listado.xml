@@ -1,51 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fitsSystemWindows="true"
+    android:padding="16dp"
     tools:context=".Listado">
 
-    <TableRow
-        android:id="@+id/tableRow"
+    <!-- 1. Tabla para mostrar los datos -->
+    <!-- La tabla ocupará todo el espacio disponible EXCEPTO el que ocupe el botón -->
+    <TableLayout
+        android:id="@+id/tblistado"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_above="@+id/button_regresar"
+        android:layout_alignParentTop="true">
 
-        <Button
-            android:id="@+id/button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="Regresar" />
-
-    </TableRow>
-
-    <TableRow
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" >
-
-        <TableLayout
-            android:id="@+id/tblistado"
+        <!-- Aquí se añadirán las filas de datos desde el código Java -->
+        <!-- Ejemplo de cómo se vería una cabecera -->
+        <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            android:background="#CCCCCC">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="ID"
+                android:textStyle="bold"
+                android:padding="8dp"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:text="Nombre"
+                android:textStyle="bold"
+                android:padding="8dp"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:text="Apellido"
+                android:textStyle="bold"
+                android:padding="8dp"/>
+        </TableRow>
 
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+    </TableLayout>
 
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+    <!-- 2. Botón para regresar -->
+    <!-- Este botón se alineará en la parte inferior de la pantalla -->
+    <Button
+        android:id="@+id/button_regresar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:onClick="Regresar"
+        android:text="Regresar" />
 
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
-        </TableLayout>
-    </TableRow>
-
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+</RelativeLayout>

@@ -12,7 +12,7 @@ public final class FeedReaderContract {
         public static final String column2 = "apellido";
     }
 
-    // CORRECCIÓN: Añadido un espacio después de "TABLE "
+
     public static final String SQL_CREATE_ENTRIES =
             "CREATE TABLE " + FeedEntry.nameTable + " (" +
                     FeedEntry._ID + " INTEGER PRIMARY KEY," +
